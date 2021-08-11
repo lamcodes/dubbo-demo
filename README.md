@@ -5,3 +5,5 @@ SpringBoot 2.0 + dubbo 的整合demo
 
 ### 运行项目
 首先启动服务提供者，再启动服务调用者，打开谷歌浏览器，输入http://localhost:9091/sayHello/caizhenhao
+  
+目前存在问题，连接部署在docker上的zookeeper，服务提供者启动报错
