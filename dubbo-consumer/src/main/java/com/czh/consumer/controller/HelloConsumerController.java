@@ -2,6 +2,7 @@ package com.czh.consumer.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.czh.api.service.HelloService;
+import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloConsumerController {
     //用下面这样指定服务提供者url的方式可以做到服务直连，不经过zookeeper
    // @Reference(interfaceName = "com.czh.api.service.HelloService",url = "dubbo://ip:20880",application = "dubbo-provider",timeout = 3000,version = "${demo.service.version}")
-    @Reference(version = "${demo.service.version}")
+    @DubboReference
     private HelloService helloService;
 
     @RequestMapping("/sayHello/{name}")

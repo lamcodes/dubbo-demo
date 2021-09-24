@@ -1,11 +1,14 @@
 package com.czh.provider;
 
-import com.alibaba.dubbo.config.spring.context.annotation.EnableDubbo;
+
+
+import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@EnableDubbo
+//@EnableDubbo(scanBasePackages = "com.czh")
+@EnableDubbo(scanBasePackages = "com.czh")
 public class DubboProviderApplication {
 
     public static void main(String[] args) {

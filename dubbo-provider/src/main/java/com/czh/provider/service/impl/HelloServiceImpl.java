@@ -8,10 +8,12 @@ import com.czh.api.service.HelloService;
  * Author:CaiZhenhao
  * Data:2019/5/21
  * Time:20:56
+ *
+ * @author admin
  */
-@Service(version = "${demo.service.version}")
+//@DubboService
+@Service
 public class HelloServiceImpl implements HelloService {
-
     @Override
     public String sayHello(String name) {
         return "Hello " + name + ",This is springboot-dubbo test";
